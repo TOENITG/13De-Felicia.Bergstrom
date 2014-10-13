@@ -18,6 +18,7 @@ public class upp1 {
         System.out.print("Fyll i ditt personnummer: ");
         number_name = user_input.next();
         
+                //DayNumber anger dagen i det färdiga meddelandet, if ___ else skriver ut om det är t.ex Första (1a) eller Fjärde (4e).
                 int DayNumber = Integer.parseInt(number_name.substring(4,6));
                
                     String t = "";
@@ -27,7 +28,8 @@ public class upp1 {
                         else {
                             t = ( DayNumber + "e");
                         }
-               
+        
+        //NumberNameChars säger ut månaden. Switchen bestämmer numrenas namn.                
         String NumberNameChars = "";
         NumberNameChars = number_name.substring(2,4);
                
