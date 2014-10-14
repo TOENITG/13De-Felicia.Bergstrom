@@ -81,3 +81,14 @@ public class upp1 {
     }
     
 }
+
+/*
+Bra!
+Roligt att du har jagt till kontrollen på vilken "ändelse" som datumet ska ha, samt månader.
+Du hade kunnat lösa det med en Array istället för en Switch. Resultatet hade varit detsamma,
+men ned mycket kortare kod.
+
+Jag kommer presentera Arrays för er.
+
+Tack!
+*/
