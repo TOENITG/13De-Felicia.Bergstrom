@@ -77,7 +77,7 @@ public class InlamningsUppgift2v2 {
         
     }
     
-    //Clears everything!
+    //Clears everything! Or it should clear everything when I get it to work.
     public final static void clearConsole(){
     try
     {
