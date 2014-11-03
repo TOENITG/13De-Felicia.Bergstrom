@@ -8,19 +8,22 @@ public class InlamningsUppgift2v2 {
         //User input is OKIDOKI to this method
         Scanner user_input=new Scanner( System.in );
         double readin = 0;
-    do {    
+        
+      boolean a = true;
+// If boolean is true, the message will appear (and keep appearing until it turns to false.   
+    while(a) { 
         try {
         String something=user_input.next();
         readin = Double.parseDouble(something);
+        a = false;
         }
         catch (NumberFormatException err) {
             System.out.println( "Detta är inte ett tal, försök igen!" );
         }
-        return readin;
+      }
+      return readin;   
     }
-    while {
-        
-    }
+    
     
     public static void main(String[] args) {
         
