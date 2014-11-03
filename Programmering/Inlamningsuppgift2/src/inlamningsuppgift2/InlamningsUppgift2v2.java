@@ -4,18 +4,22 @@ import java.util.Scanner;
 public class InlamningsUppgift2v2 {
 
     //Error messages
-    static double felsteg() {
+    static double everything() {
         //User input is OKIDOKI to this method
         Scanner user_input=new Scanner( System.in );
-
+        double readin = 0;
+    do {    
         try {
         String something=user_input.next();
-        return Double.parseDouble(something);
+        readin = Double.parseDouble(something);
         }
         catch (NumberFormatException err) {
             System.out.println( "Detta är inte ett tal, försök igen!" );
         }
-        return
+        return readin;
+    }
+    while {
+        
     }
     
     public static void main(String[] args) {
@@ -26,12 +30,12 @@ public class InlamningsUppgift2v2 {
         
         //Someone can now write in the consol, first number
         System.out.print("Första talet, tack! ");
-        double firstnumber = felsteg();
+        double firstnumber = everything();
         
         
         //Second number
         System.out.println("Andra talet, tack! ");
-        double secondnumber = felsteg();
+        double secondnumber = everything();
         
         //Doing the math with second number
         answer = firstnumber + secondnumber;
@@ -41,7 +45,7 @@ public class InlamningsUppgift2v2 {
         
         //Third number
         System.out.println("Tredje talet, tack! ");
-        double thirdnumber = felsteg();
+        double thirdnumber = everything();
         
         //Doing the math with third number
         answer = (firstnumber + secondnumber) - thirdnumber;
@@ -51,7 +55,7 @@ public class InlamningsUppgift2v2 {
         
         //Fourth number
         System.out.println("Fjärde talet, tack! ");
-        double fourthnumber = felsteg();
+        double fourthnumber = everything();
         
         //Doing the math with fourth number
         answer = ((firstnumber + secondnumber) - thirdnumber) * fourthnumber;
@@ -61,7 +65,7 @@ public class InlamningsUppgift2v2 {
         
         //Fifth number
         System.out.println("Femte talet, tack! ");
-        double fifthnumber = felsteg();
+        double fifthnumber = everything();
         
         //Doing the math with fifth number
         answer =(((firstnumber + secondnumber) - thirdnumber) * fourthnumber / fifthnumber);
