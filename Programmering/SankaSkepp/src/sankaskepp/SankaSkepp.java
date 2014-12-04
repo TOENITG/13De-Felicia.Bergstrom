@@ -3,6 +3,8 @@ package sankaskepp;
 import java.util.Scanner;
 
 public class SankaSkepp {
+    
+    static String player1[][] = new String[10][10];
 
     public static void main(String[] args) {
         Scanner user_input = new Scanner( System.in );
@@ -14,46 +16,48 @@ public class SankaSkepp {
         String Instruktioner;
         System.out.println("Intruktioner ... Redo att köra?");
         Instruktioner = user_input.next();
-        Spelplan();
+        Spelplan(player1);
+        // Shoot(player1,player2);
+        // Shoot(player2,player1);
 }
         
 //Spelplanen.
-        static void Spelplan() {
+        static void Spelplan(String[][] spelplan) {
+            
+        Scanner user_input = new Scanner( System.in );
         
-        String Hej[][] = new String[10][10];
-// Koordinater.        
-        Hej[0][0] = "1";
-        Hej[0][1] = "2";
-        Hej[0][2] = "3";
-        Hej[0][3] = "4";
-        Hej[0][4] = "5";
-        Hej[0][5] = "6";
-        Hej[0][6] = "7";
-        Hej[0][7] = "8";
-        Hej[0][8] = "9";
-        Hej[0][9] = "10";
-        
-        Hej[1][0] = "2";
-        Hej[2][0] = "3";
-        Hej[3][0] = "4";
-        Hej[4][0] = "5";
-        Hej[5][0] = "6";
-        Hej[6][0] = "7";
-        Hej[7][0] = "8";
-        Hej[8][0] = "9";
-        Hej[9][0] = "10";
-// Utplacering av koordinater.       
-        for(int i = 0; i < 10; i++) {
-            for(int j = 0; j < 10; j++) {
-                if(Hej[i][j] == null){
-                    Hej[i][j] = " ";
+        System.out.println("0  1  2  3  4  5  6  7  8  9  10");
+        for(int y = 0; y < spelplan[0].length; y++) {
+            System.out.print(y+1);
+            for(int x = 0; x < spelplan.length; x++) {
+                if(spelplan[x][y] == null){
+                    spelplan[x][y] = " ";
                 }
-// Skriver ut de vågräta koordinaterna.                
-                System.out.print(Hej[i][j] + " " + " " );
+                System.out.print("  " + spelplan[x][y]);
             }
-// Skriver ut de lodräta koordinaterna.
             System.out.println();
         }
+        String Skepp;
+        System.out.println("Var vill du sätta ut ditt skepp?");
+        Skepp = user_input.next();
+        
+        String Koordinat1 = "";
+        Koordinat1 = Skepp.substring(0, 1);
+        
+        int spacePos = Skepp.indexOf(",");
+        String Hej = "";
+        Koordinat1 = Skepp.substring(0, (spacePos));
+        
+        String Koordinat2 = "";
+        Koordinat1 = Skepp.substring(0, 1);
+        
+        int spacePon = Skepp.indexOf(",");
+        String Hey = "";
+        Koordinat2 = Skepp.substring((spacePon + 1), 3);
+        
+        System.out.println(spelplan[Integer.valueOf(Koordinat1)][Integer.valueOf(Koordinat2)]);
+        
     }
 }
-// Spara koordinaterna för att veta om skeppen har sjunkit eller ej.
+
+// Spara alla uppgifter kring spelplanerna.
