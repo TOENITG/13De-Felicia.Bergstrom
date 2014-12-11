@@ -57,6 +57,7 @@ public class SankaSkepp {
         
         System.out.println(spelplan[Integer.valueOf(Koordinat1)][Integer.valueOf(Koordinat2)]);
         
+        spelplan[Integer.valueOf(Koordinat1)][Integer.valueOf(Koordinat2)] = "x";
     }
 }
 
