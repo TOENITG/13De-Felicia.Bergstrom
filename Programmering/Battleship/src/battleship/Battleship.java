@@ -8,7 +8,7 @@ public class Battleship {
     public static void main(String[] args) {
         
         int[][] board = new int[6][6];
-        int[][] ships = new int[5][2];
+        int[][] ships = new int[6][6];
         int[] shoot = new int[2];
         int attempts=0,
             shotHit=0;
@@ -41,7 +41,7 @@ public class Battleship {
         }
         while(shotHit!=5);
         
-        System.out.println("\n\n\nBattleship Java game finished! You hit 3 ships in "+attempts+" attempts");
+        System.out.println("\n\n\nBattleship Java game finished! You hit 5 ships in "+attempts+" attempts");
         showBoard(board);
     }
     
@@ -79,7 +79,7 @@ public class Battleship {
     public static void initShips(int[][] ships){
         Random random = new Random();
         
-        for(int ship=0 ; ship < 5 ; ship++){
+        for(int ship=0 ; ship < 6 ; ship++){
             ships[ship][0]=random.nextInt(6);
             ships[ship][1]=random.nextInt(6);
             

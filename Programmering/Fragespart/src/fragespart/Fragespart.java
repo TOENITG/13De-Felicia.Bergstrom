@@ -19,7 +19,8 @@ public class Fragespart {
             }
 
             System.out.println("2: Vad brukar Ziva David alltid ta fel på?");
-            if(scan.nextLine().equalsIgnoreCase("talesätt")){
+            svar = scan.nextLine();
+            if(svar.equalsIgnoreCase("talesätt") || svar.equalsIgnoreCase("ordspråk")){
                 poäng++;
             }
 
@@ -67,7 +68,7 @@ public class Fragespart {
                 poäng++;
             }
     // Utskrift av poäng när omgången är klar.        
-            System.out.println(poäng + " av 10.\n Vill du spela igen?");
+            System.out.println(poäng + " av 10.\nVill du spela igen?");
 
             svar = scan.nextLine();
             if(svar.equalsIgnoreCase("nej")){
