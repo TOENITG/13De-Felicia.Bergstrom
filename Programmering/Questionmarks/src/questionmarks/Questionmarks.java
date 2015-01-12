@@ -1,16 +1,18 @@
 package questionmarks;
 
 import java.util.Scanner;
+import javax.swing.JOptionPane;
 
 public class Questionmarks {
 
     static int askQuestion(String question, String answer1, String answer2){
-        Scanner scan = new Scanner( System.in );
+        
+        
         String svar;
         int correct=0;
 // Scannar in användarens svar.       
-        System.out.println(question);
-            svar = scan.nextLine();
+        
+            svar = JOptionPane.showInputDialog(question);
 // Kollar upp om svaret är svarsalternativ 1. 
                 if(svar.equalsIgnoreCase(answer1)){
                     correct=1;             
@@ -26,6 +28,7 @@ public class Questionmarks {
     public static void main(String[] args) {
         
         Scanner scan = new Scanner(System.in);
+        
         String svar;
         
         do{
@@ -52,10 +55,8 @@ public class Questionmarks {
 
             poäng += askQuestion("10: Vilken agentur jobbade Sam Hannas fru för?","cia", "central intelligence agency");
 
-// Utskrift av poäng när omgången är klar.        
-            System.out.println(poäng + " av 10.\nVill du spela igen?");
-// En onödig del av koden där användaren får besvara frågan ovan, oavsett vilket svar börjar koden om.
-            svar = scan.nextLine();
+// Räknar ihop och visar användarens poäng. Börjar om koden.
+            svar = JOptionPane.showInputDialog(poäng + " rätt av 10.\nVill du spela igen?");
             if(svar.equalsIgnoreCase("nej")){
                 System.out.println("Det tar jag som ett ja!");
                 svar = "ja";
