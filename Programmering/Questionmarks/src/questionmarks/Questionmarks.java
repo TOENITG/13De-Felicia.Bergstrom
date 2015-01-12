@@ -7,21 +7,19 @@ public class Questionmarks {
 
     static int askQuestion(String question, String answer1, String answer2){
         
-        
         String svar;
         int correct=0;
 // Scannar in användarens svar.       
-        
-            svar = JOptionPane.showInputDialog(question);
+        svar = JOptionPane.showInputDialog(question);
 // Kollar upp om svaret är svarsalternativ 1. 
-                if(svar.equalsIgnoreCase(answer1)){
-                    correct=1;             
-                }
+            if(svar.equalsIgnoreCase(answer1)){
+                correct=1;             
+            }
 // Kollar upp om svaret är svarsalternativ 2.                
-                if(svar.equalsIgnoreCase(answer2)){
-                    correct=1;             
-                }
-         return correct;
+            if(svar.equalsIgnoreCase(answer2)){
+                correct=1;             
+            }
+        return correct;
     }
     
     
@@ -57,11 +55,11 @@ public class Questionmarks {
 
 // Räknar ihop och visar användarens poäng. Börjar om koden.
             svar = JOptionPane.showInputDialog(poäng + " rätt av 10.\nVill du spela igen?");
+            
             if(svar.equalsIgnoreCase("nej")){
                 System.out.println("Det tar jag som ett ja!");
                 svar = "ja";
             }
-        
         }
         while(svar.equalsIgnoreCase("ja"));
     }
