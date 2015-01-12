@@ -4,18 +4,19 @@ import java.util.Scanner;
 
 public class Questionmarks {
 
-    static int askQuestion(String question, String answer, String Answer){
+    static int askQuestion(String question, String answer1, String answer2){
         Scanner scan = new Scanner( System.in );
         String svar;
         int correct=0;
-        
+// Scannar in användarens svar.       
         System.out.println(question);
             svar = scan.nextLine();
-                if(svar.equalsIgnoreCase(answer)){
+// Kollar upp om svaret är svarsalternativ 1. 
+                if(svar.equalsIgnoreCase(answer1)){
                     correct=1;             
                 }
-                
-                if(svar.equalsIgnoreCase(Answer)){
+// Kollar upp om svaret är svarsalternativ 2.                
+                if(svar.equalsIgnoreCase(answer2)){
                     correct=1;             
                 }
          return correct;
@@ -53,7 +54,7 @@ public class Questionmarks {
 
 // Utskrift av poäng när omgången är klar.        
             System.out.println(poäng + " av 10.\nVill du spela igen?");
-
+// En onödig del av koden där användaren får besvara frågan ovan, oavsett vilket svar börjar koden om.
             svar = scan.nextLine();
             if(svar.equalsIgnoreCase("nej")){
                 System.out.println("Det tar jag som ett ja!");

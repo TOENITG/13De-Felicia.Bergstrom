@@ -131,7 +131,7 @@ public class Battleship {
         }
         return false;
     }
-
+// Is supposed to tell a hint to the player, but I took that away from him/her because it became too easy.
     public static void hint(int[] shoot, int[][] ships, int attempt){
         int row=0,
             column=0;
@@ -145,7 +145,7 @@ public class Battleship {
         
         System.out.println();
     }
-
+// Changing the board, showing the hit och the miss.
     public static void changeboard(int[] shoot, int[][] ships, int[][] board){
         if(hit(shoot,ships))
             board[shoot[0]][shoot[1]]=1;
